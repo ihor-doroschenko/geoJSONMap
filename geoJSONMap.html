@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GeoJSON Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="geoJSONMap.css" />
+    <link rel="stylesheet" href="noUiSlider-14.6.2\noUiSlider-14.6.2\distribute\nouislider.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
+    <script src="noUiSlider-14.6.2\noUiSlider-14.6.2\distribute\nouislider.js"></script>
+    <script src="worldBorders.js"></script>
+  </head>
+  <body>
+    <div id="infoBlock" class="info">
+      <h2>More information</h2>
+      <p>Get data to the earthquakes over:</p>
+      <select id="selectEarthquake">
+        <option value="hour" selected>past Hour</option>
+        <option value="day">past Day</option>
+        <option value="week">past 7 Days</option>
+        <option value="month">past 30 Days</option>
+      </select>
+      <button id="request">Add earthquake data</button>
+      <select id="countries">
+        <option>(no values selected)</option>
+      </select>
+      <p id="country"></p>
+    </div>
+    <div id="overlay">
+      <h2>My Map</h2>
+      <p id="text">0,0</p>
+    </div>
+    <div id="map"></div>
+    <script src="geoJSONMap.js"></script>
+  </body>
+</html>
